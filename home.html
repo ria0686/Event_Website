@@ -11,6 +11,7 @@
             display: flex;
             justify-content: center;
             gap: 20px;
+            transition: max-height 0.3s ease-in-out;
         }
         nav a{
             color: white;
@@ -101,6 +102,32 @@
             background: #ddd;
         }
 
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            top: 15px;
+        }
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            nav {
+                flex-direction: column;
+                text-align: center;
+                overflow: hidden;
+                max-height: 0;
+            }
+            nav a {
+                display: block;
+                padding: 10px;
+            }
+        }
         @keyframes fadeIn{
             from{opacity: 0;}
             to{opacity: 1;}
@@ -135,6 +162,7 @@
     <header>
         <img src="Screenshot 2025-03-14 194619.png" alt="Chitkara University Logo">
         <h1>Chitkara University Events & Hackathons</h1>
+        <button class="menu-toggle">&#9776</button>
     </header>
     <nav>
         <a>Home</a>
@@ -164,7 +192,13 @@
                 document.body.classList.add("dark-mode");
             }
         }
-    </script>
     
+        const menuToggle = document.querySelector(".menu-toggle");
+        const nav = document.querySelector("nav");
+
+        menuToggle.addEventListener("click", () => {
+            nav.style.maxHeight = nav.style.maxHeight === "0px" || nav.style.maxHeight === "" ? "300px" : "0px";
+        });
+    </script>
 </body>
 </html>
