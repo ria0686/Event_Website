@@ -29,7 +29,9 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            transition: background-color 0.3s, color 0.3s;
         }
+        
         header {
             background-color: #d90429;
             color: white;
@@ -69,6 +71,36 @@
             border-radius: 5px;
             font-weight: bold;
         }
+        .dark-mode {
+            background-color: #222;
+            color: white;
+        }
+        .dark-mode .container {
+            background: #333;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+        .dark-mode nav {
+            background-color: #222;
+        }
+        .dark-mode nav a:hover {
+            background-color: #555;
+        }
+        .dark-mode header {
+            background-color: #bb0420;
+        }
+        .dark-mode-toggle {
+            background: white;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .dark-mode-toggle:hover {
+            background: #ddd;
+        }
+
         @keyframes fadeIn{
             from{opacity: 0;}
             to{opacity: 1;}
@@ -91,7 +123,9 @@
         <a>Event Updates</a>
         <a>Submit Event</a>
         <a>Past Events</a>
-        <a>Help</a>   
+        <a>Help</a> 
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+ 
     </nav>
 
     <div class="container">
@@ -101,5 +135,17 @@
             <p class="highlight">Stay updated and connected!</p>
         </section>
     </div>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+            localStorage.setItem("darkMode", document.body.classList.contains("dark-mode") ? "enabled" : "disabled");
+        }
+        window.onload = function() {
+            if (localStorage.getItem("darkMode") === "enabled") {
+                document.body.classList.add("dark-mode");
+            }
+        }
+    </script>
+    
 </body>
 </html>
