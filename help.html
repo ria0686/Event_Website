@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help - Technovia University Events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        header {
+            background-color: rgb(97, 144, 246);
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background 0.2s, transform 0.2s;
+        }
+        nav a:hover {
+            background-color: #666;
+            transform: scale(1.05);
+        }
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+        .faq {
+            margin-bottom: 1rem;
+        }
+        .faq h3 {
+            margin-bottom: 0.5rem;
+            color: #d90429;
+        }
+        .faq p {
+            margin-left: 1rem;
+        }
+        .dark-mode {
+            background-color: #222;
+            color: white;
+        }
+        .dark-mode .container {
+            background-color: #333;
+        }
+        .dark-mode nav {
+            background-color: #222;
+        }
+        .dark-mode nav a:hover {
+            background-color: #555;
+        }
+        .dark-mode header {
+            background-color: rgb(97, 144, 246);
+        }
+        .dark-mode-toggle {
+            background: white;
+            border: none;
+            padding: 8px 12px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .dark-mode-toggle:hover {
+            background: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>Help & Support</header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#">Event Updates</a>
+        <a href="#">Past Events</a>
+        <a href="help.html">Help</a>
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+    </nav>
+
+    <div class="container">
+        <h2>Frequently Asked Questions (FAQs)</h2>
+
+        <div class="faq">
+            <h3>🔹 How do I register for an event?</h3>
+            <p>Go to the 'Event Updates' page and click on the "Register" button under the event you're interested in.</p>
+        </div>
+
+        <div class="faq">
+            <h3>🔹 I missed a hackathon. Can I still view the results?</h3>
+            <p>Yes, visit the 'Past Events' page to explore winners, results, and highlights.</p>
+        </div>
+
+        <div class="faq">
+            <h3>🔹 Who can I contact for technical issues?</h3>
+            <p>You can email our support team at <a href="mailto:support@technoviauniv.edu">support@technoviauniv.edu</a>.</p>
+        </div>
+
+        <div class="faq">
+            <h3>🔹 How do I turn on dark mode?</h3>
+            <p>Click the 🌙 Dark Mode button in the navigation bar. Your preference will be saved for future visits.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+            localStorage.setItem("darkMode", document.body.classList.contains("dark-mode") ? "enabled" : "disabled");
+        }
+        window.onload = function() {
+            if (localStorage.getItem("darkMode") === "enabled") {
+                document.body.classList.add("dark-mode");
+            }
+        }
+    </script>
+</body>
+</html>
