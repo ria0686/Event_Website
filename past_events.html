@@ -4,6 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Past Events - Chitkara University</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #005f99; /* Changed to blue */
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .event {
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .event:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .event h2 {
+            color: #005f99; /* Changed to blue */
+            margin-top: 0;
+        }
+
+        .event p {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                font-size: 1.2rem;
+            }
+
+            .event {
+                padding: 15px;
+            }
+
+            .container {
+                padding: 0 10px;
+            }
+        }
+    </style>
+
 </head>
 <body>
     <header>
