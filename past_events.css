@@ -21,3 +21,25 @@ header {
     margin-bottom: 20px;
     padding: 15px 20px;
 }
+
+.event {
+    border-left: 5px solid #3498db;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.event:hover {
+    transform: scale(1.02);
+}
+
+.event h2 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.event p {
+    margin: 5px 0;
+    color: #555;
+}
+
+
