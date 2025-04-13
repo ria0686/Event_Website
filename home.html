@@ -4,203 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Technovia University Events & Hackathons</title>
-    <style>
-        nav{
-            background-color: #444;
-            padding: 10px 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            transition: max-height 0.3s ease-in-out;
-        }
-        nav a{
-            color: white;
-            text-decoration: solid;
-            font-size: 20px;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: transform 0.2s ease-in-out;
-        }
-        nav a:hover{
-            background-color: #666;
-            transform: scale(1.1);
-        }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            transition: background-color 0.3s, color 0.3s
-        }
-        
-        header {
-            background-color: rgb(97, 144, 246);
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            opacity: 0;
-            animation: fadeIn 1.5s ease-in-out forwards;
-        }
-        header img {
-            height: 120px;
-        }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 2rem auto;
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            opacity: 0;
-            transform: translateY(20px);
-            animation: slideUp 1s ease-in-out forwards 0.5s;
-        }
-        .content {
-            text-align: center;
-            padding: 2rem;
-        }
-        .highlight{
-            background-color: rgba(248, 248, 50, 0.936);
-            padding: 10px;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        .dark-mode {
-            background-color: #222;
-            color: white;
-        }
-        .dark-mode .container {
-            background: #333;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-        }
-        .dark-mode nav {
-            background-color: #222;
-        }
-        .dark-mode nav a:hover {
-            background-color: #555;
-        }
-        .dark-mode header {
-            background-color: rgb(97, 144, 246);
-        }
-        .dark-mode-toggle {
-            background: white;
-            border: none;
-            padding: 10px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        .dark-mode-toggle:hover {
-            background: #ddd;
-        }
-
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
-            position: absolute;
-            right: 20px;
-            top: 15px;
-        }
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
-            nav {
-                flex-direction: column;
-                text-align: center;
-                overflow: hidden;
-                max-height: 0;
-            }
-            nav a {
-                display: block;
-                padding: 10px;
-            }
-        }
-        @keyframes fadeIn{
-            from{opacity: 0;}
-            to{opacity: 1;}
-        }
-        @keyframes slideUp{
-            from{opacity: 0; transform: translateY(20px); }
-            to{opacity: 1; transform: translateY(0); }
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        table th, table td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: center;
-        }
-        table th {
-            background-color: #d90429;
-            color: white;
-        }
-        table tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        table tr:hover {
-            background-color: #f1f1f1;
-        }
-    </style>
+    <link rel="stylesheet" href="home.css">
 </head>
 <body>
     <header>
-
-
         <img src="./logo.png" alt="University Logo">
         <h1>Technovia University Events & Hackathons</h1>
-
+        <button class="menu-toggle">&#9776</button>
     </header>
     <nav>
         <a>Home</a>
-        <a>Event Updates</a>
-        <a>Past Events</a>
+        <a href="events_update.html">Event Updates</a>
+        <a href="past_events.html">Past Events</a>
         <a>Help</a> 
         <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
- 
     </nav>
 
     <div class="container">
         <section class="content">
             <h2>Welcome to Technovia University Events Portal</h2>
-            <p>Explore upcoming as well as past events, hackathons and fests. </p>
+            <p>Explore upcoming as well as past events, hackathons and fests.</p>
             <p class="highlight">Stay updated and connected!</p>
         </section>
-        
-                        
     </div>
-    <script>
-        function toggleDarkMode() {
-            document.body.classList.toggle("dark-mode");
-            localStorage.setItem("darkMode", document.body.classList.contains("dark-mode") ? "enabled" : "disabled");
-        }
-        window.onload = function() {
-            if (localStorage.getItem("darkMode") === "enabled") {
-                document.body.classList.add("dark-mode");
-            }
-        }
-    
-        const menuToggle = document.querySelector(".menu-toggle");
-        const nav = document.querySelector("nav");
-
-        menuToggle.addEventListener("click", () => {
-            nav.style.maxHeight = nav.style.maxHeight === "0px" || nav.style.maxHeight === "" ? "300px" : "0px";
-        });
-    </script>
+    <script src="home.js"></script
 </body>
 </html>
+
