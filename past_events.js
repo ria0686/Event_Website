@@ -22,3 +22,25 @@ function highlightText(text, searchValue) {
     const regex = new RegExp(`(${searchValue})`, 'gi');
     return text.replace(regex, '<mark>$1</mark>'); // Wrap matching text in <mark> tags for highlighting
 }
+
+
+// Dark Mode Toggle
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    const darkModeButton = document.querySelector(".dark-mode-toggle");
+    
+    if (document.body.classList.contains("dark-mode")) {
+        darkModeButton.textContent = "🌞 Light Mode";
+    } else {
+        darkModeButton.textContent = "🌙 Dark Mode";
+    }
+    
+    localStorage.setItem("darkMode", document.body.classList.contains("dark-mode") ? "enabled" : "disabled");
+}
+
+window.onload = function() {
+    if (localStorage.getItem("darkMode") === "enabled") {
+        document.body.classList.add("dark-mode");
+        document.querySelector(".dark-mode-toggle").textContent = "🌞 Light Mode";
+    }
+}
