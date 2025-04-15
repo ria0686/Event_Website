@@ -16,9 +16,22 @@
             background-color: rgb(97, 144, 246);
             color: white;
             padding: 1.5rem 0;
-            text-align: center;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .header-content img {
+            height: 80px;
+        }
+        .header-content h2 {
             font-size: 1.8rem;
             font-weight: bold;
+            margin: 0;
         }
         nav {
             background-color: #444;
@@ -93,7 +106,12 @@
     </style>
 </head>
 <body>
-    <header>Help & Support</header>
+    <header>
+        <div class="header-content">
+            <img src="./logo.png" alt="University Logo">
+            <h2>Help & Support</h2>
+        </div>
+    </header>
     <nav>
         <a href="./home.html">Home</a>
         <a href="./events_update.html">Event Updates</a>
