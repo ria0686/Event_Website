@@ -7,18 +7,17 @@
     <link rel="stylesheet" href="past_events.css">
 </head>
 <body>
-    <header>
-        <img src="./logo.png" alt="University Logo">
-        <h1>Past Events</h1>
-    </header>
     <nav>
         <a href="home.html">Home</a>
         <a href="events_update.html">Event Updates</a>
         <a href="help.html">Help</a>
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
     </nav>
+
     <div class="search-bar-container">
         <input type="text" id="searchInput" placeholder="Search events by name..." />
     </div>
+
     <div class="container">
         <div class="event">
             <h2>Hackathon 2024</h2>
@@ -36,6 +35,7 @@
             <p>Description: A networking platform that brought together future entrepreneurs, mentors, and innovators for idea exchange and growth.</p>
         </div>
     </div>
+
     <script src="past_events.js"></script>
 </body>
 </html>
