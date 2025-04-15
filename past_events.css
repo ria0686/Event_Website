@@ -30,7 +30,18 @@ header {
     background-color: rgb(97, 144, 246);
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 1rem 0rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; 
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+header img {
+    height: 120px;
 }
 
 .container {
