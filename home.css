@@ -99,6 +99,55 @@ header img {
 .gallery-grid img:hover {
     transform: scale(1.05);
 }
+.events-section {
+    text-align: center;
+    margin: 3rem auto;
+    padding: 1rem;
+    width: 90%;
+    max-width: 1200px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.08);
+}
+
+.events-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(2, auto);  /* 2 rows */
+    gap: 1.5rem;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+.event-card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+    text-align: left;
+}
+
+.event-card h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #111;
+}
+
+.event-card p {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
 
 @media (max-width: 768px) {
     .menu-toggle {
@@ -123,23 +172,3 @@ header img {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
-/* table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-table th, table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
-}
-table th {
-    background-color: #d90429;
-    color: white;
-}
-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-table tr:hover {
-    background-color: #f1f1f1;
-} */
