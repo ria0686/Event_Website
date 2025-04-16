@@ -15,7 +15,7 @@
         header {
             background-color: rgb(97, 144, 246);
             color: white;
-            padding: 1.5rem 0;
+            padding: 0.7rem 0;
         }
         .header-content {
             display: flex;
@@ -26,7 +26,7 @@
             margin: 0 auto;
         }
         .header-content img {
-            height: 80px;
+            height: 90px;
         }
         .header-content h2 {
             font-size: 1.8rem;
@@ -60,10 +60,15 @@
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0,0,0,0.1);
         }
+        h1 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #f8f3f3;
+        }
         h2 {
             text-align: center;
             margin-bottom: 1.5rem;
-            color: #333;
+            color:black;
         }
         .faq {
             margin-bottom: 1rem;
@@ -75,41 +80,14 @@
         .faq p {
             margin-left: 1rem;
         }
-        .dark-mode {
-            background-color: #222;
-            color: white;
-        }
-        .dark-mode .container {
-            background-color: #333;
-        }
-        .dark-mode nav {
-            background-color: #222;
-        }
-        .dark-mode nav a:hover {
-            background-color: #555;
-        }
-        .dark-mode header {
-            background-color: rgb(97, 144, 246);
-        }
-        .dark-mode-toggle {
-            background: white;
-            border: none;
-            padding: 8px 12px;
-            font-size: 14px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        .dark-mode-toggle:hover {
-            background: #ddd;
-        }
+        
     </style>
 </head>
 <body>
     <header>
         <div class="header-content">
             <img src="./logo.png" alt="University Logo">
-            <h2>Help & Support</h2>
+            <h1>Help & Support</h2>
         </div>
     </header>
     <nav>
@@ -117,7 +95,7 @@
         <a href="./events_update.html">Event Updates</a>
         <a href="./past_events.html">Past Events</a>
         
-        <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+        
     </nav>
 
     <div class="container">
@@ -139,21 +117,61 @@
         </div>
 
         <div class="faq">
-            <h3>🔹 How do I turn on dark mode?</h3>
-            <p>Click the 🌙 Dark Mode button in the navigation bar. Your preference will be saved for future visits.</p>
+            <h3>🔹 Can students from other colleges participate?</h3>
+            <p>Yes, certain events and hackathons are open to all. Please check individual event details for eligibility criteria.</p>
         </div>
+        
+        <div class="faq">
+            <h3>🔹 Is there any fee to participate?</h3>
+            <p>Most university-hosted events are free. However, some external collaborations might require a nominal registration fee.</p>
+        </div>
+        
+        <div class="faq">
+            <h3>🔹 Where can I find event rules and guidelines?</h3>
+            <p>Event-specific rules and guidelines are available on the registration page of each event.</p>
+        </div>
+        
+        <div class="faq">
+            <h3>🔹 Can I volunteer for Technovia events?</h3>
+            <p>Absolutely! Volunteer registrations open a few weeks before major events. Keep an eye on announcements on the homepage.</p>
+        </div>
+        
+        <div class="faq">
+            <h3>🔹 Will participants get certificates?</h3>
+            <p>Yes, all participants will receive digital certificates. Winners and top performers may receive additional rewards.</p>
+        </div>
+        <hr style="margin: 2rem 0;">
+
+<h2 style="text-align:center;">Have a Question?</h2>
+<form id="questionForm" style="max-width:600px; margin: 0 auto;">
+    <label for="name">Your Name:</label><br>
+    <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc;"><br>
+
+    <label for="email">Your Email:</label><br>
+    <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc;"><br>
+
+    <label for="question">Your Question:</label><br>
+    <textarea id="question" name="question" rows="5" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc;"></textarea><br>
+
+    <button type="submit" style="background-color: #d90429; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">Submit</button>
+</form>
+<p id="formMessage" style="text-align:center; margin-top: 1rem; font-weight: bold;"></p>
+
+        
     </div>
 
     <script>
-        function toggleDarkMode() {
-            document.body.classList.toggle("dark-mode");
-            localStorage.setItem("darkMode", document.body.classList.contains("dark-mode") ? "enabled" : "disabled");
-        }
-        window.onload = function() {
-            if (localStorage.getItem("darkMode") === "enabled") {
-                document.body.classList.add("dark-mode");
-            }
-        }
+        document.getElementById("questionForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // prevent actual form submission
+
+    // Basic fake submission feedback
+    document.getElementById("formMessage").textContent = "Thanks for your question! We’ll get back to you soon.";
+    
+    // Reset the form
+    document.getElementById("questionForm").reset();
+});
+
+       
     </script>
 </body>
 </html>
