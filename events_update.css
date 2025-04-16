@@ -1,3 +1,4 @@
+/* General Page Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -15,6 +16,7 @@ nav {
     gap: 20px;
     transition: max-height 0.3s ease-in-out;
 }
+
 nav a {
     color: white;
     text-decoration: solid;
@@ -23,6 +25,7 @@ nav a {
     border-radius: 5px;
     transition: transform 0.2s ease-in-out;
 }
+
 nav a:hover {
     background-color: #666;
     transform: scale(1.1);
@@ -38,7 +41,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px; 
+    gap: 20px;
     animation: fadeIn 1.5s ease-in-out forwards;
 }
 
@@ -53,7 +56,7 @@ header img {
     background: white;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     animation: slideUp 1s ease-in-out forwards;
 }
 
@@ -68,35 +71,36 @@ h2 {
     animation: glowText 1.5s ease-in-out infinite alternate;
 }
 
+/* Event Section Styling */
 .event {
-    display: flex; /* Align items horizontally */
-    align-items: center; /* Center items vertically */
-    justify-content: space-between; /* Space out details and photo */
-    gap: 1rem; /* Add spacing between text and photo */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
     background-color: #fdfdfd;
     border-left: 6px solid rgb(97, 144, 246);
     padding: 1.5rem;
     margin-bottom: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s ease;
 }
 
 .event:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
 .event-details {
-    flex-grow: 1; /* Allow event details to take up more space */
+    flex-grow: 1;
 }
 
 .event-photo {
-    width: 150px; /* Fixed width for photo */
-    height: 100px; /* Fixed height for photo */
-    object-fit: cover; /* Maintain aspect ratio and fill space */
-    border-radius: 8px; /* Optional: Rounded corners for polished look */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Optional: Add depth */
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 event h3 {
@@ -119,6 +123,23 @@ event h3 {
     font-size: 16px;
 }
 
+/* Register Button Styling */
+.register-button {
+    padding: 10px 20px;
+    background-color: rgb(97, 144, 246);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.register-button:hover {
+    background-color: rgb(65, 120, 220);
+    transform: scale(1.05);
+}
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -136,15 +157,15 @@ event h3 {
 
     .event {
         padding: 1rem;
-        flex-direction: column; /* Stack content vertically on smaller screens */
+        flex-direction: column;
     }
 
     .event-photo {
         width: 100%;
-        height: auto; /* Adjust size to fit smaller screens */
+        height: auto;
     }
 
     h2 {
-        font-size: 24px;
-    }
+        font-size: 24px;
+    }
 }
