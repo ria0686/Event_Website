@@ -1,0 +1,143 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color:rgb(97, 144, 246);
+    color: white;
+    text-align: center;
+    padding: 0rem 0rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; 
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+header img {
+    height: 90px;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #2c3e50;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+nav a:hover {
+    background-color: #34495e;
+    transform: scale(1.05);
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    background: #ecf0f1;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.dark-mode-toggle:hover {
+    background-color: #bdc3c7;
+}
+
+/* Search Bar */
+.search-bar-container input {
+    width: 80%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    margin: 20px auto;
+    display: block;
+}
+
+/* Event Cards */
+.container {
+    padding: 20px;
+}
+
+.event {
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    border-left: 5px solid #3498db;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.event:hover {
+    transform: scale(1.02);
+}
+
+.event h2 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.event p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+.dark-mode .container {
+    background: #333;
+}
+
+.dark-mode nav {
+    background-color: #111;
+}
+
+.dark-mode nav a {
+    color: white;
+}
+
+.dark-mode nav a:hover {
+    background-color: #444;
+}
+
+.dark-mode .event {
+    background-color: #333;
+    color: #ccc;
+}
+
+.dark-mode .event:hover {
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .search-bar-container input {
+    background-color: #444;
+    color: white;
+    border: 2px solid #ccc;
+}
