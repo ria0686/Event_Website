@@ -29,7 +29,7 @@ nav a:hover {
 }
 
 header {
-    background-color:rgb(97, 144, 246);
+    background-color: rgb(97, 144, 246);
     color: white;
     text-align: center;
     padding: 1rem 0rem;
@@ -48,7 +48,7 @@ header img {
 
 .container {
     width: 90%;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 2rem auto;
     background: white;
     padding: 2rem;
@@ -69,6 +69,10 @@ h2 {
 }
 
 .event {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out details and photo */
+    gap: 1rem; /* Add spacing between text and photo */
     background-color: #fdfdfd;
     border-left: 6px solid rgb(97, 144, 246);
     padding: 1.5rem;
@@ -83,7 +87,19 @@ h2 {
     box-shadow: 0 6px 18px rgba(0,0,0,0.1);
 }
 
-.event h3 {
+.event-details {
+    flex-grow: 1; /* Allow event details to take up more space */
+}
+
+.event-photo {
+    width: 150px; /* Fixed width for photo */
+    height: 100px; /* Fixed height for photo */
+    object-fit: cover; /* Maintain aspect ratio and fill space */
+    border-radius: 8px; /* Optional: Rounded corners for polished look */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Optional: Add depth */
+}
+
+event h3 {
     margin-top: 0;
     color: #2a2a2a;
     font-size: 22px;
@@ -103,8 +119,6 @@ h2 {
     font-size: 16px;
 }
 
-
-
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -122,9 +136,15 @@ h2 {
 
     .event {
         padding: 1rem;
+        flex-direction: column; /* Stack content vertically on smaller screens */
+    }
+
+    .event-photo {
+        width: 100%;
+        height: auto; /* Adjust size to fit smaller screens */
     }
 
     h2 {
-        font-size: 24px;
-    }
+        font-size: 24px;
+    }
 }
