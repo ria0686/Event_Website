@@ -104,3 +104,30 @@ nav a:hover {
     color: #333;
 }
 
+.event {
+    background: linear-gradient(135deg, #667eea, #764ba2); /* Purple-blue gradient */
+    color: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.event h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.event p {
+    color: #f0f0f0;
+    font-size: 1.1rem;
+    margin: 6px 0;
+}
+
