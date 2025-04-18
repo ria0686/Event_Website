@@ -135,7 +135,7 @@ h2 {
 /* Register Button Styling */
 .register-button {
     padding: 10px 20px;
-    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Purple gradient */
+    background: linear-gradient(135deg, #ff4d4d, #ff0000); /* Red gradient */
     color: white;
     border: none;
     border-radius: 5px;
@@ -145,9 +145,10 @@ h2 {
 }
 
 .register-button:hover {
-    background-color: #764ba2; /* Darker purple hover effect */
+    background-color: #cc0000; /* Darker red hover effect */
     transform: scale(1.05);
 }
+
 
 /* Animations */
 @keyframes fadeIn {
