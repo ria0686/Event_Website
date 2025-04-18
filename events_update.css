@@ -11,7 +11,7 @@ body {
 
 /* Navigation Bar */
 nav {
-    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Purple gradient */
+    background: #2c3e50; /* Purple gradient */
     padding: 10px 0;
     display: flex;
     justify-content: center;
@@ -29,13 +29,13 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #764ba2; /* Darker purple on hover */
+    background-color: #34495e; /* Darker purple on hover */
     transform: scale(1.1);
 }
 
 /* Header Section */
 header {
-    background: linear-gradient(135deg, #764ba2, #6a11cb); /* Purple gradient */
+    background:rgb(97, 144, 246); /* Purple gradient */
     color: white;
     text-align: center;
     padding: 1rem 0rem;
@@ -132,6 +132,7 @@ h2 {
     background-color: #f8f8ff; /* Subtle purple tint */
 }
 
+/* Register Button Styling */
 /* Register Button Styling */
 .register-button {
     padding: 10px 20px;
