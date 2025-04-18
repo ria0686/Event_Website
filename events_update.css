@@ -1,5 +1,4 @@
 /* General Page Styling */
-/* General Page Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -11,17 +10,16 @@ body {
 
 /* Navigation Bar */
 nav {
-    background: #2c3e50; /* Purple gradient */
+    background: #2c3e50;
     padding: 10px 0;
     display: flex;
     justify-content: center;
     gap: 20px;
-    transition: max-height 0.3s ease-in-out;
 }
 
 nav a {
     color: white;
-    text-decoration: solid;
+    text-decoration: none;
     font-size: 20px;
     padding: 10px 15px;
     border-radius: 5px;
@@ -29,13 +27,13 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #34495e; /* Darker purple on hover */
+    background-color: #34495e;
     transform: scale(1.1);
 }
 
 /* Header Section */
 header {
-    background:rgb(97, 144, 246); /* Purple gradient */
+    background: #6190f6;
     color: white;
     text-align: center;
     padding: 1rem 0rem;
@@ -45,7 +43,6 @@ header {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    animation: fadeIn 1.5s ease-in-out forwards;
 }
 
 header img {
@@ -57,33 +54,29 @@ header img {
     width: 90%;
     max-width: 1200px;
     margin: 2rem auto;
-    background: white; /* White container for better readability */
+    background: white;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    animation: slideUp 1s ease-in-out forwards;
 }
 
 /* Section Heading */
 h2 {
     margin-bottom: 2rem;
-    font-size: 28px;
-    color: #6a11cb; /* Vibrant purple text */
-    position: relative;
-    border-bottom: 3px solid #6a11cb;
-    padding-bottom: 0.3rem;
+    font-size: 36px;
+    font-weight: bold;
     text-align: center;
-    animation: glowText 1.5s ease-in-out infinite alternate;
+    color: black;
 }
 
 /* Event Section Styling */
 .event {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    background: linear-gradient(135deg, #667eea, #764ba2); /* Purple gradient */
-    color: white;
+    display: flex; /* Use flexbox for horizontal alignment */
+    flex-direction: row; /* Align content in a row */
+    align-items: center; /* Center-align vertically */
+    justify-content: space-between; /* Ensure spacing between content */
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: black;
     border-radius: 12px;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
@@ -96,29 +89,34 @@ h2 {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
-.event-details {
-    flex-grow: 1;
+/* Event Content Styling */
+.event-content {
+    width: 65%; /* Take up 2/3 of the container */
+    padding-right: 1rem; /* Add space between text and image */
 }
 
+.event-content h3 {
+    font-size: 32px; /* Increased font size */
+    font-weight: bold; /* Make it bold */
+    color: black; /* Black color for headings */
+    margin-bottom: 10px; /* Add spacing below headings */
+}
+
+.event-content p {
+    color: black; /* Black text color */
+    font-size: 18px;
+    margin-bottom: 10px; /* Add spacing between paragraphs */
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Event Image Styling */
 .event-photo {
-    width: 150px;
-    height: 100px;
+    width: 35%; /* Take up 1/3 of the container */
+    max-width: 400px; /* Set a maximum width */
+    height: auto; /* Maintain aspect ratio */
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* Event Title */
-.event h3 {
-    color: #fff; /* White for better contrast */
-    font-size: 22px;
-}
-
-/* Event Description */
-.event p {
-    color: #f0f0f0; /* Light gray for readability */
-    margin: 5px 0;
-    font-size: 16px;
 }
 
 /* Search Bar */
@@ -129,56 +127,73 @@ h2 {
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 16px;
-    background-color: #f8f8ff; /* Subtle purple tint */
+    background-color: #f8f8ff;
 }
 
 /* Register Button Styling */
-/* Register Button Styling */
 .register-button {
     padding: 10px 20px;
-    background: linear-gradient(135deg, #ff4d4d, #ff0000); /* Red gradient */
+    background: linear-gradient(135deg, #ff4d4d, #ff0000);
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
+    margin-top: 1rem;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .register-button:hover {
-    background-color: #cc0000; /* Darker red hover effect */
+    background-color: #cc0000;
     transform: scale(1.05);
 }
 
-
 /* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes slideUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .container {
-        padding: 1.2rem;
+    .event {
+        flex-direction: column; /* Stack content vertically on small screens */
     }
 
-    .event {
-        padding: 1rem;
-        flex-direction: column;
+    .event-content {
+        width: 100%; /* Full width for text */
+        padding-right: 0; /* Remove right padding */
     }
 
     .event-photo {
-        width: 100%;
-        height: auto;
+        width: 100%; /* Full width for image */
+        margin-top: 1rem; /* Add spacing above image */
     }
 
     h2 {
-        font-size: 24px;
+        font-size: 32px;
+    }
+
+    .event-content p {
+        font-size: 14px;
+    }
+
+    .event-content h3 {
+        font-size: 28px; /* Slightly smaller for mobile screens */
     }
 }
