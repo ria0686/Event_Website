@@ -1,3 +1,5 @@
+/* General Page Styling */
+/* General Page Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,29 +9,33 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* Navigation Bar */
 nav {
-    background-color: #444;
+    background: #2c3e50; /* Purple gradient */
     padding: 10px 0;
     display: flex;
     justify-content: center;
     gap: 20px;
     transition: max-height 0.3s ease-in-out;
 }
+
 nav a {
     color: white;
     text-decoration: solid;
     font-size: 20px;
     padding: 10px 15px;
     border-radius: 5px;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, background-color 0.3s;
 }
+
 nav a:hover {
-    background-color: #666;
+    background-color: #34495e; /* Darker purple on hover */
     transform: scale(1.1);
 }
 
+/* Header Section */
 header {
-    background-color: rgb(97, 144, 246);
+    background:rgb(97, 144, 246); /* Purple gradient */
     color: white;
     text-align: center;
     padding: 1rem 0rem;
@@ -38,78 +44,84 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px; 
+    gap: 20px;
     animation: fadeIn 1.5s ease-in-out forwards;
 }
 
 header img {
-    height: 120px;
+    height: 60px;
 }
 
+/* Main Container */
 .container {
     width: 90%;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 2rem auto;
-    background: white;
+    background: white; /* White container for better readability */
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     animation: slideUp 1s ease-in-out forwards;
 }
 
+/* Section Heading */
 h2 {
     margin-bottom: 2rem;
     font-size: 28px;
-    color: rgb(97, 144, 246);
+    color: #6a11cb; /* Vibrant purple text */
     position: relative;
-    border-bottom: 3px solid rgb(97, 144, 246);
+    border-bottom: 3px solid #6a11cb;
     padding-bottom: 0.3rem;
     text-align: center;
     animation: glowText 1.5s ease-in-out infinite alternate;
 }
 
+/* Event Section Styling */
 .event {
-    display: flex; /* Align items horizontally */
-    align-items: center; /* Center items vertically */
-    justify-content: space-between; /* Space out details and photo */
-    gap: 1rem; /* Add spacing between text and photo */
-    background-color: #fdfdfd;
-    border-left: 6px solid rgb(97, 144, 246);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background: linear-gradient(135deg, #667eea, #764ba2); /* Purple gradient */
+    color: white;
+    border-radius: 12px;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .event:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
 .event-details {
-    flex-grow: 1; /* Allow event details to take up more space */
+    flex-grow: 1;
 }
 
 .event-photo {
-    width: 150px; /* Fixed width for photo */
-    height: 100px; /* Fixed height for photo */
-    object-fit: cover; /* Maintain aspect ratio and fill space */
-    border-radius: 8px; /* Optional: Rounded corners for polished look */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Optional: Add depth */
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-event h3 {
-    margin-top: 0;
-    color: #2a2a2a;
+/* Event Title */
+.event h3 {
+    color: #fff; /* White for better contrast */
     font-size: 22px;
 }
 
+/* Event Description */
 .event p {
+    color: #f0f0f0; /* Light gray for readability */
     margin: 5px 0;
     font-size: 16px;
 }
 
+/* Search Bar */
 #searchInput {
     width: 100%;
     padding: 0.8rem;
@@ -117,8 +129,29 @@ event h3 {
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 16px;
+    background-color: #f8f8ff; /* Subtle purple tint */
 }
 
+/* Register Button Styling */
+/* Register Button Styling */
+.register-button {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #ff4d4d, #ff0000); /* Red gradient */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.register-button:hover {
+    background-color: #cc0000; /* Darker red hover effect */
+    transform: scale(1.05);
+}
+
+
+/* Animations */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -129,6 +162,7 @@ event h3 {
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .container {
         padding: 1.2rem;
@@ -136,12 +170,12 @@ event h3 {
 
     .event {
         padding: 1rem;
-        flex-direction: column; /* Stack content vertically on smaller screens */
+        flex-direction: column;
     }
 
     .event-photo {
         width: 100%;
-        height: auto; /* Adjust size to fit smaller screens */
+        height: auto;
     }
 
     h2 {

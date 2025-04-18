@@ -51,24 +51,9 @@ nav a:hover {
     transform: scale(1.05);
 }
 
-/* Dark Mode Toggle Button */
-.dark-mode-toggle {
-    background: #ecf0f1;
-    border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: background 0.3s;
-}
-
-.dark-mode-toggle:hover {
-    background-color: #bdc3c7;
-}
-
 /* Search Bar */
 .search-bar-container input {
-    width: 80%;
+    width: 90%; /* increased width */
     padding: 12px;
     font-size: 16px;
     border-radius: 5px;
@@ -77,67 +62,73 @@ nav a:hover {
     display: block;
 }
 
-/* Event Cards */
+/* Container padding */
 .container {
-    padding: 20px;
+    padding: 10px 15px; /* reduced side padding */
+}
+
+/* Category styling */
+.category {
+    margin: 20px 10px; /* reduced vertical & horizontal margin */
+    padding: 10px 15px; /* adjusted padding */
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* Optional centering on larger screens */
+@media (min-width: 768px) {
+    .category {
+        margin: 20px auto;
+        max-width: 95%; /* increased max-width for less side margin */
+    }
+}
+
+.category h2 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+/* Event styling */
+.event {
+    background-color: #fff;
+    border-left: 5px solid #007acc;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.event h3 {
+    margin-top: 0;
+    color: #333;
 }
 
 .event {
-    background-color: #ffffff;
-    margin-bottom: 20px;
-    padding: 15px 20px;
-    border-left: 5px solid #3498db;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
+    background: linear-gradient(135deg, #667eea, #764ba2); /* Purple-blue gradient */
+    color: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .event:hover {
-    transform: scale(1.02);
+    transform: scale(1.03);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
-.event h2 {
-    margin-top: 0;
-    color: #2c3e50;
+.event h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
 }
 
 .event p {
-    margin: 5px 0;
-    color: #555;
+    color: #f0f0f0;
+    font-size: 1.1rem;
+    margin: 6px 0;
 }
 
-/* Dark Mode Styles */
-.dark-mode {
-    background-color: #222;
-    color: white;
-}
-
-.dark-mode .container {
-    background: #333;
-}
-
-.dark-mode nav {
-    background-color: #111;
-}
-
-.dark-mode nav a {
-    color: white;
-}
-
-.dark-mode nav a:hover {
-    background-color: #444;
-}
-
-.dark-mode .event {
-    background-color: #333;
-    color: #ccc;
-}
-
-.dark-mode .event:hover {
-    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
-}
-
-.dark-mode .search-bar-container input {
-    background-color: #444;
-    color: white;
-    border: 2px solid #ccc;
-}
