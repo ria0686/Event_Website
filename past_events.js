@@ -1,3 +1,4 @@
+
 document.getElementById("searchInput").addEventListener("input", function () {
     const searchValue = this.value.toLowerCase();
     const events = document.querySelectorAll(".event");
