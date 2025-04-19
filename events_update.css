@@ -5,10 +5,26 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
-    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Navigation Bar */
+/* Header */
+header {
+    background: #6190f6;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+header img {
+    height: 60px;
+}
+
+/* Navigation */
 nav {
     background: #2c3e50;
     padding: 10px 0;
@@ -16,7 +32,6 @@ nav {
     justify-content: center;
     gap: 20px;
 }
-
 nav a {
     color: white;
     text-decoration: none;
@@ -25,31 +40,12 @@ nav a {
     border-radius: 5px;
     transition: transform 0.2s ease-in-out, background-color 0.3s;
 }
-
 nav a:hover {
     background-color: #34495e;
     transform: scale(1.1);
 }
 
-/* Header Section */
-header {
-    background: #6190f6;
-    color: white;
-    text-align: center;
-    padding: 1rem 0rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-header img {
-    height: 60px;
-}
-
-/* Main Container */
+/* Container */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -60,7 +56,7 @@ header img {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Section Heading */
+/* Headings */
 h2 {
     margin-bottom: 2rem;
     font-size: 36px;
@@ -69,12 +65,12 @@ h2 {
     color: black;
 }
 
-/* Event Section Styling */
+/* Event Cards */
 .event {
-    display: flex; /* Use flexbox for horizontal alignment */
-    flex-direction: row; /* Align content in a row */
-    align-items: center; /* Center-align vertically */
-    justify-content: space-between; /* Ensure spacing between content */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     background: linear-gradient(135deg, #667eea, #764ba2);
     color: black;
     border-radius: 12px;
@@ -83,37 +79,30 @@ h2 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
 .event:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
-
-/* Event Content Styling */
 .event-content {
-    width: 65%; /* Take up 2/3 of the container */
-    padding-right: 1rem; /* Add space between text and image */
+    width: 65%;
+    padding-right: 1rem;
 }
-
 .event-content h3 {
-    font-size: 32px; /* Increased font size */
-    font-weight: bold; /* Make it bold */
-    color: black; /* Black color for headings */
-    margin-bottom: 10px; /* Add spacing below headings */
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
 }
-
 .event-content p {
-    color: black; /* Black text color */
+    color: black;
     font-size: 18px;
-    margin-bottom: 10px; /* Add spacing between paragraphs */
-    line-height: 1.6; /* Improve readability */
+    margin-bottom: 10px;
+    line-height: 1.6;
 }
-
-/* Event Image Styling */
 .event-photo {
-    width: 35%; /* Take up 1/3 of the container */
-    max-width: 400px; /* Set a maximum width */
-    height: auto; /* Maintain aspect ratio */
+    width: 35%;
+    max-width: 400px;
+    height: auto;
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
@@ -130,7 +119,7 @@ h2 {
     background-color: #f8f8ff;
 }
 
-/* Register Button Styling */
+/* Register Button */
 .register-button {
     padding: 10px 20px;
     background: linear-gradient(135deg, #ff4d4d, #ff0000);
@@ -142,58 +131,31 @@ h2 {
     margin-top: 1rem;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
 .register-button:hover {
     background-color: #cc0000;
     transform: scale(1.05);
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .event {
-        flex-direction: column; /* Stack content vertically on small screens */
+        flex-direction: column;
     }
-
     .event-content {
-        width: 100%; /* Full width for text */
-        padding-right: 0; /* Remove right padding */
+        width: 100%;
+        padding-right: 0;
     }
-
     .event-photo {
-        width: 100%; /* Full width for image */
-        margin-top: 1rem; /* Add spacing above image */
+        width: 100%;
+        margin-top: 1rem;
     }
-
     h2 {
         font-size: 32px;
     }
-
     .event-content p {
         font-size: 14px;
     }
-
     .event-content h3 {
-        font-size: 28px; /* Slightly smaller for mobile screens */
+        font-size: 28px;
     }
 }
