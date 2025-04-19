@@ -192,6 +192,16 @@ header img {
         padding: 10px;
     }
 }
+
+footer {
+    background-color: #2d2d2d;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+  }
+  
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
