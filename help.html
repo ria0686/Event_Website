@@ -1,45 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Help & Support - Technovia University Events</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        header {
-            background-color: rgb(97, 144, 246);
-            color: white;
-            text-align: centre;
-            padding: 1rem 0;
-            font-size: 1.5rem;
-            font-weight: bold;
-            gap: 20px;
-            display: flex;
-            justify-content: center;
-        }
-        .header-content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        .header-content img {
-            height: 60px;
-        }
-        .header-content h2 {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin: 0;
-        }
-        nav {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Help & Support - Technovia University Events</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f7fc;
+      color: #333;
+    }
+
+    header {
+      background-color: rgb(97, 144, 246);
+      color: white;
+      padding: 1.5rem 0;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .header-content img {
+      height: 60px;
+    }
+
+    .header-content h1 {
+      font-size: 2.2rem;
+      margin: 0;
+    }
+
+    nav {
             background-color: #444;
             padding: 10px 0;
             display: flex;
@@ -58,125 +56,191 @@
             background-color: #666;
             transform: scale(1.05);
         }
-        .container {
-            max-width: 1000px;
-            margin: 2rem auto;
-            background-color: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 1.5rem;
-            color: #f8f3f3;
-        }
-        h2 {
-            text-align: center;
-            margin-bottom: 1.5rem;
-            color:black;
-        }
-        .faq {
-            margin-bottom: 1rem;
-        }
-        .faq h3 {
-            margin-bottom: 0.5rem;
-            color: #d90429;
-        }
-        .faq p {
-            margin-left: 1rem;
-        }
-        
-    </style>
+
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #333;
+      font-size: 1.8rem;
+    }
+
+    .faq {
+      background-color: #fbe9e7;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .faq:hover {
+      background-color: #ffe0b2;
+    }
+
+    .faq h3 {
+      color: #d84315;
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    .faq p {
+      margin-top: 0.5rem;
+      color: #555;
+      display: none;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      margin-top: 2rem;
+    }
+
+    form label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    button[type="submit"] {
+      background-color: #00004d;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #1a1a80;
+    }
+
+    #formMessage {
+      text-align: center;
+      margin-top: 1rem;
+      font-weight: bold;
+      color: green;
+    }
+
+    footer {
+      background-color: #2d2d2d;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .header-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <img src="./logo.png" alt="University Logo">
-            <h1>Help & Support</h2>
-        </div>
-    </header>
-    <nav>
-        <a href="./home.html">Home</a>
-        <a href="./events_update.html">Event Updates</a>
-        <a href="./past_events.html">Past Events</a>
-        <a href="./feedback.html">Feedback</a>
-    </nav>
-
-    <div class="container">
-        <h2>Frequently Asked Questions (FAQs)</h2>
-
-        <div class="faq">
-            <h3>🔹 How do I register for an event?</h3>
-            <p>Go to the 'Event Updates' page and click on the "Register" button under the event you're interested in.</p>
-        </div>
-
-        <div class="faq">
-            <h3>🔹 I missed a hackathon. Can I still view the results?</h3>
-            <p>Yes, visit the 'Past Events' page to explore winners, results, and highlights.</p>
-        </div>
-
-        <div class="faq">
-            <h3>🔹 Who can I contact for technical issues?</h3>
-            <p>You can email our support team at <a href="mailto:support@technoviauniv.edu">support@technoviauniv.edu</a>.</p>
-        </div>
-
-        <div class="faq">
-            <h3>🔹 Can students from other colleges participate?</h3>
-            <p>Yes, certain events and hackathons are open to all. Please check individual event details for eligibility criteria.</p>
-        </div>
-        
-        <div class="faq">
-            <h3>🔹 Is there any fee to participate?</h3>
-            <p>Most university-hosted events are free. However, some external collaborations might require a nominal registration fee.</p>
-        </div>
-        
-        <div class="faq">
-            <h3>🔹 Where can I find event rules and guidelines?</h3>
-            <p>Event-specific rules and guidelines are available on the registration page of each event.</p>
-        </div>
-        
-        <div class="faq">
-            <h3>🔹 Can I volunteer for Technovia events?</h3>
-            <p>Absolutely! Volunteer registrations open a few weeks before major events. Keep an eye on announcements on the homepage.</p>
-        </div>
-        
-        <div class="faq">
-            <h3>🔹 Will participants get certificates?</h3>
-            <p>Yes, all participants will receive digital certificates. Winners and top performers may receive additional rewards.</p>
-        </div>
-        <hr style="margin: 2rem 0;">
-
-<h2 style="text-align:center;">Have a Question?</h2>
-<form id="questionForm" style="max-width:600px; margin: 0 auto;">
-    <label for="name">Your Name:</label><br>
-    <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc;"><br>
-
-    <label for="email">Your Email:</label><br>
-    <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc;"><br>
-
-    <label for="question">Your Question:</label><br>
-    <textarea id="question" name="question" rows="5" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc;"></textarea><br>
-
-    <button type="submit" style="background-color: #d90429; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">Submit</button>
-</form>
-<p id="formMessage" style="text-align:center; margin-top: 1rem; font-weight: bold;"></p>
-
-        
+  <header>
+    <div class="header-content">
+      <img src="./logo.png" alt="University Logo">
+      <h1>Help & Support</h1>
     </div>
+  </header>
 
-    <script>
-        document.getElementById("questionForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // prevent actual form submission
+  <nav>
+    <a href="./home.html">Home</a>
+    <a href="./events_update.html">Event Updates</a>
+    <a href="./past_events.html">Past Events</a>
+    <a href="./feedback.html">Feedback</a>
+  </nav>
 
-    // Basic fake submission feedback
-    document.getElementById("formMessage").textContent = "Thanks for your question! We’ll get back to you soon.";
-    
-    // Reset the form
-    document.getElementById("questionForm").reset();
-});
+  <div class="container">
+    <h2>Frequently Asked Questions (FAQs)</h2>
 
-       
-    </script>
+    <div class="faq"><h3>🔸 How do I register for an event?</h3><p>Go to the 'Event Updates' page and click on the "Register" button under the event you're interested in.</p></div>
+    <div class="faq"><h3>🔸 I missed a hackathon. Can I still view the results?</h3><p>Yes, visit the 'Past Events' page to explore winners, results, and highlights.</p></div>
+    <div class="faq"><h3>🔸 Who can I contact for technical issues?</h3><p>Email our support team at <a href="mailto:support@technoviauniv.edu">support@technoviauniv.edu</a>.</p></div>
+    <div class="faq"><h3>🔸 Can students from other colleges participate?</h3><p>Yes, certain events are open to all. Please check event details for eligibility.</p></div>
+    <div class="faq"><h3>🔸 Is there any fee to participate?</h3><p>Most university-hosted events are free. Some may require a nominal fee.</p></div>
+    <div class="faq"><h3>🔸 Where can I find event rules?</h3><p>Rules and guidelines are available on each event's registration page.</p></div>
+    <div class="faq"><h3>🔸 Can I volunteer for Technovia events?</h3><p>Absolutely! Volunteer forms open weeks before major events. Check the homepage regularly.</p></div>
+    <div class="faq"><h3>🔸 Will participants get certificates?</h3><p>Yes, digital certificates are issued. Winners may receive extra rewards.</p></div>
+    <div class="faq"><h3>🔸 How do I get updates for upcoming events?</h3><p>Make sure to visit the 'Event Updates' page regularly or subscribe to our newsletter.</p></div>
+    <div class="faq"><h3>🔸 Can I suggest a new event idea?</h3><p>We’d love to hear your ideas! Submit your suggestions using the Feedback page.</p></div>
+    <div class="faq"><h3>🔸 Will there be food/snacks at events?</h3><p>Most full-day events provide refreshments. Check individual event pages for details.</p></div>
+    <div class="faq"><h3>🔸 How do I become an event ambassador?</h3><p>Ambassador applications open before large-scale events. Watch the homepage announcements!</p></div>
+
+    <!-- Additional FAQs -->
+    <div class="faq"><h3>🔸 Are events conducted online or offline?</h3><p>Events may be offline, online, or hybrid. The format will be mentioned in the event description.</p></div>
+    <div class="faq"><h3>🔸 Can I participate in multiple events?</h3><p>Yes, as long as the timings don’t clash and you meet eligibility requirements.</p></div>
+    <div class="faq"><h3>🔸 How will I receive my certificate?</h3><p>Certificates are usually emailed to your registered email ID within a week of the event.</p></div>
+
+    <hr style="margin: 2rem 0;">
+
+    <h2>Have a Question?</h2>
+    <form id="questionForm">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="question">Your Question:</label>
+      <textarea id="question" name="question" rows="5" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+    <p id="formMessage"></p>
+  </div>
+
+  <footer>
+    &copy; 2025 Technovia University | Designed with ❤️ for student engagement
+  </footer>
+
+  <script>
+    // Toggle FAQ answer visibility
+    document.querySelectorAll('.faq').forEach(faq => {
+      faq.addEventListener('click', () => {
+        const para = faq.querySelector('p');
+        const isVisible = para.style.display === 'block';
+        document.querySelectorAll('.faq p').forEach(p => p.style.display = 'none');
+        para.style.display = isVisible ? 'none' : 'block';
+      });
+    });
+
+    // Handle form submission
+    document.getElementById("questionForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      document.getElementById("formMessage").textContent = "Thanks for your question! We’ll get back to you soon.";
+      document.getElementById("questionForm").reset();
+    });
+  </script>
 </body>
 </html>
