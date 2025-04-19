@@ -10,7 +10,7 @@ header {
     background: #6190f6;
     color: white;
     text-align: center;
-    padding: 1rem 0rem;
+    padding: 1rem;
     font-size: 1.5rem;
     font-weight: bold;
     display: flex;
@@ -23,14 +23,12 @@ header img {
     height: 60px;
 }
 
-/* Navigation Bar */
 nav {
     background-color: #2c3e50;
     padding: 15px 0;
     display: flex;
     justify-content: center;
     gap: 30px;
-    align-items: center;
     flex-wrap: wrap;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -49,7 +47,6 @@ nav a:hover {
     transform: scale(1.05);
 }
 
-/* Search Bar */
 .search-bar-container input {
     width: 90%;
     padding: 12px;
@@ -60,13 +57,11 @@ nav a:hover {
     display: block;
 }
 
-/* Category styling */
 .category {
     margin: 20px 10px;
     padding: 10px 15px;
     background-color: #f8f8f8;
     border-radius: 10px;
-    box-sizing: border-box;
 }
 
 .category h2 {
@@ -75,15 +70,22 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
-/* Event styling */
 .event {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
     border-radius: 12px;
     padding: 25px;
     margin-bottom: 25px;
+    gap: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event.reverse {
+    flex-direction: row-reverse;
 }
 
 .event:hover {
@@ -95,10 +97,10 @@ nav a:hover {
     width: 33%;
     height: auto;
     border-radius: 6px;
-    margin-bottom: 15px;
 }
 
 .event-details {
+    flex: 1;
     padding: 10px;
 }
 
@@ -112,9 +114,13 @@ nav a:hover {
     margin: 6px 0;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
-    .category {
-        margin: 15px;
+    .event, .event.reverse {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .event img {
+        width: 90%;
     }
 }
