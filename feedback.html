@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Feedback - Technovia University Events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background-color: rgb(97, 144, 246);
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        nav a:hover {
+            background-color: #666;
+            transform: scale(1.05);
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 2rem auto;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        form label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        form input, form textarea, form select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        form button {
+            margin-top: 20px;
+            background-color: #d90429;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #b00322;
+        }
+
+        .dark-mode {
+            background-color: #222;
+            color: white;
+        }
+
+        .dark-mode .container {
+            background-color: #333;
+        }
+
+        .dark-mode nav {
+            background-color: #222;
+        }
+
+        .dark-mode nav a:hover {
+            background-color: #555;
+        }
+
+        .dark-mode header {
+            background-color: rgb(97, 144, 246);
+        }
+
+        .dark-mode-toggle {
+            background: white;
+            border: none;
+            padding: 8px 12px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .dark-mode-toggle:hover {
+            background: #ddd;
+        }
+
+        #feedbackMessage {
+            text-align: center;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .header-content img {
+            height: 90px;
+        }
+        .header-content h2 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 0;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #f8f3f3;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color:black;}
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <img src="./logo.png" alt="University Logo">
+            <h1>Give Us Your Feedback</h2>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#">Event Updates</a>
+        <a href="#">Past Events</a>
+        <a href="help.html">Help</a>
+        <a href="feedback.html">Feedback</a>
+       
+    </nav>
+
+    <div class="container">
+        <h2>We value your thoughts!</h2>
+        <form id="feedbackForm">
+            <label for="fname">Name:</label>
+            <input type="text" id="fname" name="fname" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="rating">How would you rate your experience? (1 - Poor, 5 - Excellent)</label>
+            <select id="rating" name="rating" required>
+                <option value="">-- Select a rating --</option>
+                <option value="1">1 - Poor</option>
+                <option value="2">2 - Fair</option>
+                <option value="3">3 - Good</option>
+                <option value="4">4 - Very Good</option>
+                <option value="5">5 - Excellent</option>
+            </select>
+
+            <label for="message">Your Feedback:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+
+        <p id="feedbackMessage"></p>
+    </div>
+
+    <script>
+        
+
+        document.getElementById("feedbackForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Simulated success message
+            document.getElementById("feedbackMessage").textContent = "Thank you for your feedback!";
+            document.getElementById("feedbackForm").reset();
+        });
+    </script>
+
+</body>
+</html>
