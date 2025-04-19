@@ -56,14 +56,33 @@ nav a:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Headings */
+/* Upcoming Events Heading */
 h2 {
     margin-bottom: 2rem;
-    font-size: 36px;
+    font-size: 48px; /* Larger font size */
     font-weight: bold;
     text-align: center;
-    color: black;
+    color: white; /* Text color */
+    background: linear-gradient(90deg, #ee6322, #da4597); /* Gradient background */
+    padding: 15px 20px; /* Add padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    animation: glowEffect 2s infinite; /* Add glowing animation */
 }
+
+/* Glow Animation */
+@keyframes glowEffect {
+    0% {
+        box-shadow: 0 4px 15px rgba(238, 99, 34, 0.5);
+    }
+    50% {
+        box-shadow: 0 4px 25px rgba(218, 69, 151, 0.8);
+    }
+    100% {
+        box-shadow: 0 4px 15px rgba(238, 99, 34, 0.5);
+    }
+}
+
 
 /* Event Cards */
 .event {
