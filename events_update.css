@@ -71,7 +71,7 @@ h2 {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #ee6322, #da4597);
     color: black;
     border-radius: 12px;
     padding: 1.5rem;
@@ -122,7 +122,7 @@ h2 {
 /* Register Button */
 .register-button {
     padding: 10px 20px;
-    background: linear-gradient(135deg, #ff4d4d, #ff0000);
+    background: linear-gradient(135deg, #4107d4, #b86ee0);
     color: white;
     border: none;
     border-radius: 5px;
