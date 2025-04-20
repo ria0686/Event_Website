@@ -135,6 +135,14 @@ h2 {
     background-color: #cc0000;
     transform: scale(1.05);
 }
+footer {
+    background-color: #2d2d2d;
+    color: #fff;
+    text-align: center; /* Add this or change from left to center */
+    padding: 1rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
