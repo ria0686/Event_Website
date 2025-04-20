@@ -12,7 +12,7 @@ header {
     background: #6190f6;
     color: white;
     text-align: center;
-    padding: 1rem 0;
+    padding: 0rem 0;
     font-size: 1.5rem;
     font-weight: bold;
     display: flex;
@@ -26,7 +26,7 @@ header img {
 
 /* Navigation */
 nav {
-    background: #2c3e50;
+    background-color: #444;
     padding: 10px 0;
     display: flex;
     justify-content: center;
@@ -41,8 +41,8 @@ nav a {
     transition: transform 0.2s ease-in-out, background-color 0.3s;
 }
 nav a:hover {
-    background-color: #34495e;
-    transform: scale(1.1);
+    background-color: #666;
+    transform: scale(1.05);
 }
 
 /* Container */
@@ -56,33 +56,14 @@ nav a:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Upcoming Events Heading */
+/* Headings */
 h2 {
     margin-bottom: 2rem;
-    font-size: 48px; /* Larger font size */
+    font-size: 36px;
     font-weight: bold;
     text-align: center;
-    color: white; /* Text color */
-    background: linear-gradient(90deg, #ee6322, #da4597); /* Gradient background */
-    padding: 15px 20px; /* Add padding */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    animation: glowEffect 2s infinite; /* Add glowing animation */
+    color: black;
 }
-
-/* Glow Animation */
-@keyframes glowEffect {
-    0% {
-        box-shadow: 0 4px 15px rgba(238, 99, 34, 0.5);
-    }
-    50% {
-        box-shadow: 0 4px 25px rgba(218, 69, 151, 0.8);
-    }
-    100% {
-        box-shadow: 0 4px 15px rgba(238, 99, 34, 0.5);
-    }
-}
-
 
 /* Event Cards */
 .event {
@@ -155,15 +136,6 @@ h2 {
     transform: scale(1.05);
 }
 
-footer {
-    background-color: #2d2d2d;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 3rem;
-    font-size: 0.9rem;
-  }
-  
 /* Responsive Design */
 @media (max-width: 768px) {
     .event {
