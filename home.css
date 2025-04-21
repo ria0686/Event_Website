@@ -77,6 +77,7 @@ header img {
     opacity: 0;
     animation: slideUp 1s ease-in-out forwards 0.6s;
     border: 5px solid rgb(97, 144, 246);
+    overflow-x: auto;
 }
 
 .gallery-container h2 {
@@ -176,6 +177,35 @@ header img {
 .event-card:hover {
     transform: translateY(-5px);
 }
+
+.gallery-scroll-row {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+  }
+  
+  .gallery-scroll-row::-webkit-scrollbar {
+    height: 8px;
+  }
+  .gallery-scroll-row::-webkit-scrollbar-thumb {
+    background-color: #6190f6;
+    border-radius: 4px;
+  }
+  
+  .gallery-scroll-row img {
+    flex-shrink: 0;
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+  }
+  .gallery-scroll-row img:hover {
+    transform: scale(1.05);
+}
+
 
 @media (max-width: 768px) {
     .menu-toggle {
