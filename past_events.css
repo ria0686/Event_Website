@@ -135,7 +135,7 @@ footer {
     margin-bottom: 30px;
     border-bottom: 1px solid #ddd;
     padding-bottom: 20px;
-    background: linear-gradient(135deg, #ee6322, #da4597);
+    background: linear-gradient(to right, #9b59b6, #3498db,#9b59b6);
     color: white;
     border-radius: 12px;
     padding: 25px;
