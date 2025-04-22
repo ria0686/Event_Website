@@ -8,10 +8,10 @@ body {
 }
 
 header {
-    background: #6190f6;
+    background: #2c3e50;
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 0rem;
     font-size: 1.5rem;
     font-weight: bold;
     display: flex;
@@ -135,7 +135,7 @@ footer {
     margin-bottom: 30px;
     border-bottom: 1px solid #ddd;
     padding-bottom: 20px;
-    background: linear-gradient(135deg, #ee6322, #da4597);
+    background: linear-gradient(to right, #9b59b6, #3498db,#9b59b6);
     color: white;
     border-radius: 12px;
     padding: 25px;
@@ -220,6 +220,8 @@ nav {
     gap: 20px;
     flex-wrap: wrap;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
     z-index: 1000;
 }
 

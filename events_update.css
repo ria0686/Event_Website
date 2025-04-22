@@ -9,7 +9,7 @@ body {
 
 /* Header */
 header {
-    background: #6190f6;
+    background: #2c3e50;
     color: white;
     text-align: center;
     padding: 0rem 0;
@@ -31,6 +31,9 @@ nav {
     display: flex;
     justify-content: center;
     gap: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 nav a {
     color: white;
