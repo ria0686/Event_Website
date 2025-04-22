@@ -31,6 +31,9 @@ nav {
     display: flex;
     justify-content: center;
     gap: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 nav a {
     color: white;
