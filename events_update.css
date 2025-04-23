@@ -117,14 +117,19 @@ h2 {
 
 /* Search Bar */
 #searchInput {
-    width: 100%;
-    padding: 0.8rem;
+    width: 97%; /* Adjusts width to match your request */
+    padding: 1rem;
     margin-bottom: 1.5rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+
     font-size: 16px;
-    background-color: #f8f8ff;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    border-sizing: border-box;
+    margin: 40px auto;
+    display: block;  
 }
+
+
 
 /* Register Button */
 .register-button {
