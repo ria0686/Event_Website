@@ -5,6 +5,7 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    transition: transform 0.2s ease-in-out;
 }
 
 /* Header */
@@ -19,6 +20,7 @@ header {
     align-items: center;
     justify-content: center;
     gap: 20px;
+    animation: fadeIn 1.5s ease-in-out forwards; 
 }
 header img {
     height: 60px;
@@ -150,6 +152,10 @@ footer {
 }
 
 /* Responsive Design */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 @media (max-width: 768px) {
     .event {
         flex-direction: column;
