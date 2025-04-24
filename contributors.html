@@ -6,6 +6,131 @@
     <title>Contributors - Technovia University</title>
     <link rel="stylesheet" href="contributors.css">
 </head>
+<style>
+    /* contributors.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7fa;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+header img {
+    width: 60px;
+    height: auto;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: bold;
+    padding: 8px 15px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    border-color: #2c3e50;
+    background-color: #d0e7ff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.content h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    color:#2c3e50;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+.event-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.event-card h3 {
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+.event-card p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+}
+
+.event-card a {
+    color: #0073e6;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.event-card a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+</style>
 <body>
     <header>
         <img src="./logo.png" alt="University Logo">

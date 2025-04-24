@@ -124,7 +124,7 @@ h2 {
     font-size: 16px;
     border-radius: 8px;
     border: 2px solid #ccc;
-    border-sizing: border-box;
+    border: border-box;
     margin: 40px auto;
     display: block;  
 }
