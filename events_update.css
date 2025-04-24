@@ -57,7 +57,9 @@ nav a:hover {
     margin: 2rem auto;
     background: white;
     padding: 2rem;
-   
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 1s ease-in-out forwards 0.5s;
     border-radius: 10px;
     border: 5px solid rgb(97, 144, 246);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -183,6 +185,18 @@ footer {
         font-size: 28px;
     }
 }
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
    /* Modal Styles */
    .modal {

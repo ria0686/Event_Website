@@ -121,7 +121,8 @@ nav a:hover {
 }
 
 .event-details {
-    width: 65%;
+    width: 100%;
+    flex: 1; 
 }
 
 .event-details h3 {
@@ -181,6 +182,8 @@ mark {
     .event-details {
         width: 100%;
     }
+
+    
 }
 
 
@@ -193,6 +196,7 @@ mark {
     scroll-snap-type: x mandatory;
     width: 100%;
     box-sizing: border-box;
+
   }
 
   .image-scroll-container img {
