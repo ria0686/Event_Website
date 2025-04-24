@@ -4,120 +4,234 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contributors - Technovia University</title>
-    <link rel="stylesheet" href="contributors.css">
 </head>
 <style>
-    
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f7fa;
-    color: #333;
-    padding: 20px;
-}
-
-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    background-color: #2c3e50;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-header img {
-    width: 60px;
-    height: auto;
-}
-
-header h1 {
-    font-size: 2rem;
-}
-
-nav {
+    nav {
+    background-color: #444;
+    padding: 10px 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    background-color: #e0e0e0;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 30px;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: max-height 0.3s ease-in-out;
 }
-
 nav a {
-    text-decoration: none;
-    color: #2c3e50;
-    font-weight: bold;
-    padding: 8px 15px;
-    border: 2px solid transparent;
+    color: white;
+    text-decoration: solid;
+    font-size: 20px;
+    padding: 10px 15px;
     border-radius: 5px;
-    transition: all 0.3s ease;
+    transition: transform 0.2s ease-in-out;
 }
-
 nav a:hover {
-    border-color: #2c3e50;
-    background-color: #d0e7ff;
+    background-color: #666;
+    transform: scale(1.1);
 }
-
-.container {
-    max-width: 1200px;
-    margin: auto;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s, color 0.3s;
 }
-
-.content h2 {
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 0rem 0;
     text-align: center;
-    margin-bottom: 30px;
-    font-size: 1.8rem;
-    color:#2c3e50;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+header img {
+    height: 60px;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    background: white;
+    padding: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 1s ease-in-out forwards 0.5s;
+    border: 5px solid rgb(97, 144, 246);
+}
+.content {
+    text-align: center;
+    padding: 0.5rem;
+}
+.highlight {
+    background-color: rgba(248, 248, 50, 0.936);
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.gallery-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    opacity: 0;
+    animation: slideUp 1s ease-in-out forwards 0.6s;
+    border: 5px solid rgb(97, 144, 246);
+    overflow-x: auto;
+}
+
+.gallery-container h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+.events-section {
+    text-align: center;
+    margin: 3rem auto;
+    padding: 1rem;
+    width: 90%;
+    max-width: 1200px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.08);
+    border: 5px solid rgb(97, 144, 246);
+}
+
+.events-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
 }
 
 .events-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 10px;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(2, auto);  /* 2 rows */
+    gap: 1.5rem;
+    justify-items: stretch;
+    align-items: stretch;
 }
 
+.card1 {
+    background-color: #ff7675; /* Soft Red */
+}
+.card2 {
+    background-color: #74b9ff; /* Light Blue */
+}
+.card3 {
+    background-color: #55efc4; /* Mint Green */
+}
+.card4 {
+    background-color: #ffeaa7; /* Soft Yellow */
+}
+.card5 {
+    background-color: #a29bfe; /* Lavender */
+}
+.card6 {
+    background-color: #fab1a0; /* Peach */
+}
+
+
 .event-card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+    text-align: left;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.event-card h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #111;
+}
+
+.event-card p {
+    font-size: 0.95rem;
+    color: black;
 }
 
 .event-card:hover {
     transform: translateY(-5px);
 }
 
-.event-card h3 {
-    color: #004080;
-    margin-bottom: 10px;
+.gallery-scroll-row {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+  }
+  
+  .gallery-scroll-row::-webkit-scrollbar {
+    height: 8px;
+  }
+  .gallery-scroll-row::-webkit-scrollbar-thumb {
+    background-color: #6190f6;
+    border-radius: 4px;
+  }
+  
+  .gallery-scroll-row img {
+    flex-shrink: 0;
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+  }
+  .gallery-scroll-row img:hover {
+    transform: scale(1.05);
 }
 
-.event-card p {
-    margin: 5px 0;
-    font-size: 0.95rem;
-}
 
-.event-card a {
-    color: #0073e6;
-    text-decoration: none;
-    word-break: break-word;
-}
-
-.event-card a:hover {
-    text-decoration: underline;
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    nav {
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        max-height: 0;
+    }
+    nav a {
+        display: block;
+        padding: 10px;
+    }
 }
 
 footer {
@@ -128,6 +242,15 @@ footer {
     margin-top: 3rem;
     font-size: 0.9rem;
   }
+  
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
 </style>
 <body>
@@ -137,11 +260,12 @@ footer {
     </header>
     
     <nav>
+        <a href="Home.html">Home</a>
         <a href="events_update.html">Event Updates</a>
         <a href="past_events.html">Past Events</a>
         <a href="help.html">Help</a>
         <a href="feedback.html">Feedback</a>
-        <a href="contributors.html">Contributors</a>
+        <a href="whatsapp.html">Whatsapp Group</a>
     </nav>
 
     <div class="container">
@@ -152,31 +276,31 @@ footer {
         <div class="events-grid">
             <div class="event-card card1">
                 <h3>Ria Mehandiratta</h3>
-                <p><strong>Role:</strong> Team management and code corrections</p>
+                <p><strong>Role:</strong> Frontend Developer</p>
                 <p><b>Email:</b><a href="mailto: ria@example.com"> ria0686.becse24@chitkara.edu.in</a></p>
                 <p><b>GitHub Profile:</b><a href="https://github.com/ria0686"> Ria Mehandiratta</a></p>
             </div>
             <div class="event-card card2">
                 <h3>Rekha</h3>
-                <p><strong>Role:</strong> Frontend Developer</p>
+                <p><strong>Role:</strong> Backend Developer</p>
                 <p><b>Email:</b><a href="mailto: rekha@example.com"> rekha0684.becse24@chitkara.edu.in</a></p>
                 <p><b>GitHub Profile:</b><a href="https://github.com/Rekha-cho04">Rekha</a></p>
             </div>
             <div class="event-card card3">
                 <h3>Simran</h3>
-                <p><strong>Role:</strong> Frontend Designer</p>
+                <p><strong>Role:</strong> UI/UX Designer</p>
                 <p><b>Email:</b><a href="mailto: simran@example.com"> simran0715.becse24@chitkara.edu.in</a></p>
                 <p><b>GitHub Profile:</b><a href="https://github.com/Chawlasimran006"> Simran</a></p>
             </div>
             <div class="event-card card4">
                 <h3>Ritika</h3>
-                <p><strong>Role:</strong> Frontend Developer and Content writer</p>
+                <p><strong>Role:</strong> Full Stack Developer</p>
                 <p><b>Email:</b><a href="mailto: ritika@example.com"> ritika0693.becse24@chitkara.edu.in</a></p>
                 <p><b>GitHub Profile:</b><a href="https://github.com/ritika-jindal1127"> Ritika</a></p>
             </div>
             <div class="event-card card5">
                 <h3>Nipun Singh</h3>
-                <p><strong>Role:</strong> Testing</p>
+                <p><strong>Role:</strong> Content Writer</p>
                 <p><b>Email:</b><a href="mailto: nipun@example.com"> nipun0590.becse24@chitkara.edu.in</a></p>
                 <p><b>GitHub Profile:</b><a href="https://github.com/NIPUNSINGH123"> Nipun Singh</a></p>
             </div>
