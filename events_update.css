@@ -55,7 +55,9 @@ nav a:hover {
     margin: 2rem auto;
     background: white;
     padding: 2rem;
+   
     border-radius: 10px;
+    border: 5px solid rgb(97, 144, 246);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -74,7 +76,7 @@ h2 {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(135deg, #ee6322, #da4597);
+    background: linear-gradient(135deg, #9b39b6, #3498db, #9b39b6);
     color: black;
     border-radius: 12px;
     padding: 1.5rem;
