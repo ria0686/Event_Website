@@ -5,6 +5,7 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    transition: transform 0.2s ease-in-out;
 }
 
 /* Header */
@@ -19,6 +20,7 @@ header {
     align-items: center;
     justify-content: center;
     gap: 20px;
+    animation: fadeIn 1.5s ease-in-out forwards; 
 }
 header img {
     height: 60px;
@@ -115,14 +117,19 @@ h2 {
 
 /* Search Bar */
 #searchInput {
-    width: 100%;
-    padding: 0.8rem;
+    width: 97%; /* Adjusts width to match your request */
+    padding: 1rem;
     margin-bottom: 1.5rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+
     font-size: 16px;
-    background-color: #f8f8ff;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    border-sizing: border-box;
+    margin: 40px auto;
+    display: block;  
 }
+
+
 
 /* Register Button */
 .register-button {
@@ -150,6 +157,10 @@ footer {
 }
 
 /* Responsive Design */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 @media (max-width: 768px) {
     .event {
         flex-direction: column;
