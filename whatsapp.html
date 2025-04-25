@@ -4,38 +4,170 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Your Event Website</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 font-sans">
 
+  <!-- Link your custom CSS -->
+  <style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+header {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 0rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    animation: fadeIn 1.5s ease-in-out forwards; 
+}
+header img {
+    height: 60px;
+}
+
+/* Navigation */
+nav {
+    background-color: #444;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out, background-color 0.3s;
+}
+nav a:hover {
+    background-color: #666;
+    transform: scale(1.05);
+}
+
+.main-content {
+  text-align: center;
+  padding: 1rem;
+}
+
+.whatsapp-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.join-box {
+  background: white;
+  padding: 2rem;
+  border: 2px solid #25D366;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 255, 0, 0.2);
+}
+
+.join-box ul {
+  text-align: left;
+  margin: 1rem 0;
+  padding-left: 20px;
+}
+
+.join-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .mobile-menu.show {
+    display: flex;
+  }
+}
+
+  </style>
+</head>
+<body>
   <!-- Header -->
-  <header class="text-white text-center py-6" style="background-color: #2c3e50;">
-    <h1 class="text-3xl font-bold">WhatsApp Community Group</h1>
-    <p class="mt-2">Discover exciting events, activities, and connect with like-minded people!</p>
+  <header class="header">
+    <img src="logo.png" alt="University Logo">
+    <h1>WhatsApp Community Group</h1>
   </header>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="events_update.html">Event Updateses</a>
+    <a href="past_events.html">Past Events</a>
+    <a href="help.html">Help</a>
+    <a href="./feedback.html">Feedback</a>
+    <a href="contributors.html">Contributors</a>
+</nav>
 
   <!-- Main Content -->
-  <main class="p-8 text-center">
-    <h2 class="text-xl font-semibold mb-4">Upcoming Events</h2>
-    <p class="text-gray-700 mb-8">Stay in the loop and never miss out on the action. Join our WhatsApp group for instant updates!</p>
+  <main class="main-content">
+    <h2>Upcoming Events</h2>
+    <p>Stay in the loop and never miss out on the action. Join our WhatsApp group for instant updates!</p>
     <!-- Add your events here -->
   </main>
-  <!-- WhatsApp Join Section (Lifted, Centered, Slightly Smaller) -->
-<section class="flex justify-center items-center min-h-[60vh] mt-[-4rem]">
-    <div class="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-3xl text-center border-2 border-green-500 transform transition duration-300 hover:scale-105 hover:shadow-green-400">
-      <h2 class="text-3xl font-bold text-green-700 mb-4">Join Our WhatsApp Group!</h2>
-      <p class="text-gray-700 mb-5 text-base">
-        Be part of our growing community! Get real-time updates, exclusive content, and network with fellow attendees.
-      </p>
-      <ul class="text-left text-gray-600 list-disc ml-8 mb-6 text-sm leading-relaxed">
+
+  <!-- WhatsApp Join Section -->
+  <section class="whatsapp-section">
+    <div class="join-box">
+      <h2>Join Our WhatsApp Group!</h2>
+      <p>Be part of our growing community! Get real-time updates, exclusive content, and network with fellow attendees.</p>
+      <ul>
         <li>🎉 Be the first to know about new events and announcements</li>
         <li>📸 Access exclusive behind-the-scenes content and highlights</li>
         <li>🔔 Receive reminders, tips, and updates directly to your phone</li>
         <li>💬 Network and chat with others who share your interests</li>
       </ul>
-      <a href="https://chat.whatsapp.com/IFbTbzqvpRRCeRlXeiLO1G" target="_blank" class="inline-block bg-green-500 text-white px-6 py-2 rounded-full text-base font-semibold hover:bg-green-600 transition">
-        Join WhatsApp Group
-      </a>
+      <a href="https://chat.whatsapp.com/IFbTbzqvpRRCeRlXeiLO1G" target="_blank" class="join-button">Join WhatsApp Group</a>
     </div>
   </section>
-  
+
+  <!-- Link your custom JavaScript -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+
+toggle.addEventListener('click', () => {
+  mobileMenu.classList.toggle('show');
+});
+
+  </script>
+</body>
+</html>
