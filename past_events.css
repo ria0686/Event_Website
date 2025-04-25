@@ -182,10 +182,8 @@ mark {
     .event-details {
         width: 100%;
     }
-
-    
+ 
 }
-
 
  /* Scrollable Image Gallery */
  .image-scroll-container {
@@ -208,3 +206,70 @@ mark {
     scroll-snap-align: start;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   }
+
+  /* Styling for the new Event Highlights section */
+.event-highlights {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 5px solid rgb(97, 144, 246); /* Blue border color */
+}
+
+.event-highlights h2 {
+    font-size: 32px;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.highlight-card {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-card1 {
+    background-color: #C0DFD9; /* Soft Red */
+}
+
+.highlight-card2 {
+    background-color: #E9ECE6; /* Light Blue */
+}
+
+.highlight-card3 {
+    background-color: #BCCBC9; /* Mint Green */
+}
+
+.highlight-card4 {
+    background-color: #AAB8B6; /* Purple tone */
+}
+
+.highlight-card h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.highlight-card p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .highlight-card {
+        margin: 10px;
+    }
+}
