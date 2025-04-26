@@ -38,6 +38,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
     opacity: 0;
     animation: fadeIn 1.5s ease-in-out forwards;
@@ -45,6 +46,16 @@ header {
 header img {
     height: 120px;
 }
+.menu-toggle {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    z-index: 1100;
+}  
 .container {
     width: 90%;
     max-width: 1200px;
@@ -243,3 +254,50 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+@media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+    nav {
+      flex-direction: column;
+      text-align: center;
+      max-height: 0;
+      overflow: hidden;
+    }
+    nav a {
+      display: block;
+      margin: 10px 0;
+    }
+    .events-grid {
+      grid-template-columns: 1fr;
+    }
+    .gallery-scroll-row img {
+      width: 200px;
+      height: 150px;
+    }
+    header {
+        flex-direction: column; /* Mobile me vertically */
+        padding: 0.5rem;
+    }
+    header h1 {
+        font-size: 1.3rem; /* Chhota font */
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+    nav.active {
+        max-height: 500px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .gallery-scroll-row img {
+      width: 150px;
+      height: 120px;
+    }
+  }
