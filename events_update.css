@@ -136,7 +136,7 @@ h2 {
 /* Register Button */
 .register-button {
     padding: 10px 20px;
-    background: linear-gradient(135deg, #4107d4, #b86ee0);
+    background-color: #ff5733; /* A bold, warm color for contrast */
     color: white;
     border: none;
     border-radius: 5px;
@@ -145,10 +145,12 @@ h2 {
     margin-top: 1rem;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
 .register-button:hover {
-    background-color: #cc0000;
+    background-color: #e04e29; /* Slightly darker shade for hover effect */
     transform: scale(1.05);
 }
+
 footer {
     background-color: #2d2d2d;
     color: #fff;
