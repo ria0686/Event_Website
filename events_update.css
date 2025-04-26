@@ -163,6 +163,7 @@ footer {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
 @media (max-width: 768px) {
     .event {
         flex-direction: column;
