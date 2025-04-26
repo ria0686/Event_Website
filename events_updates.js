@@ -76,3 +76,6 @@ form.addEventListener("submit", function (e) {
     modal.style.display = "none"; // Close modal
     form.reset(); // Reset form fields
 });
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+    document.querySelector('nav').classList.toggle('active');
+});

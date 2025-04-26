@@ -26,3 +26,6 @@ function highlightText(text, searchValue) {
     const regex = new RegExp(`(${searchValue})`, 'gi');
     return text.replace(regex, '<mark>$1</mark>');
 }
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+    document.querySelector('nav').classList.toggle('active');
+});

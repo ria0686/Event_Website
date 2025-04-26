@@ -22,6 +22,19 @@ header {
     gap: 20px;
     animation: fadeIn 1.5s ease-in-out forwards; 
 }
+.menu-toggle {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    z-index: 1100;
+    background: #444;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
 header img {
     height: 60px;
 }
@@ -186,6 +199,38 @@ footer {
     }
     .event-content h3 {
         font-size: 28px;
+    }
+    .menu-toggle {
+        display: block;
+      }
+    nav {
+        flex-direction: column;
+        text-align: center;
+        max-height: 50px;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+      }
+    nav a {
+        display: none;
+        margin: 10px;
+      }
+    nav.active {
+        max-height: 500px;
+        flex-direction: column;
+        align-items: center; 
+      }
+      nav.active a {
+        display: block;
+        width: 100%; 
+        padding: 10px 0;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+    header h1{
+        font-size: 1.5rem;
     }
 }
 
