@@ -9,14 +9,13 @@ body {
 header {
     background-color: #245687;
     color: white;
-    padding: 1rem 0;
+    padding: 0rem 0;
     text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 20px;
     opacity: 0;
     animation: fadeIn 1.5s ease-in-out forwards;
