@@ -3,7 +3,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: linear-gradient(-45deg, #e6f0ff);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     color: #333;
     transition: transform 0.2s ease-in-out;
 }
@@ -356,4 +358,8 @@ footer {
     margin-top: 3rem;
     font-size: 0.9rem;
   }
-  
+  @keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}

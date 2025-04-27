@@ -10,7 +10,11 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f3f3f3;
+  padding: 0;
+  background: linear-gradient(-45deg, #e6f0ff); 
+  background-size: 400% 400%;
+  animation: gradientBG 20s ease infinite;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .menu-toggle {
@@ -123,6 +127,11 @@ nav a:hover {
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
 }
 
   </style>
