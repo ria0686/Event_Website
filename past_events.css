@@ -284,19 +284,19 @@ mark {
 }
 
 .highlight-card1 {
-    background-color: #C0DFD9; /* Soft Red */
+    background-color: rgba(245, 245, 120, 0.936); /* Soft Red */
 }
 
 .highlight-card2 {
-    background-color: #E9ECE6; /* Light Blue */
+    background-color: #b8ef82; /* Light Blue */
 }
 
 .highlight-card3 {
-    background-color: #BCCBC9; /* Mint Green */
+    background-color: #7ee9db; /* Mint Green */
 }
 
 .highlight-card4 {
-    background-color: #AAB8B6; /* Purple tone */
+    background-color: #fba7b8; /* Purple tone */
 }
 
 .highlight-card h3 {
